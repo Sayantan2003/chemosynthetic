@@ -716,10 +716,6 @@ video {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -806,17 +802,13 @@ video {
   text-align: center;
 }
 
-.text-\[110px\] {
-  font-size: 110px;
+.text-\[100px\] {
+  font-size: 100px;
 }
 
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-\[100px\] {
-  font-size: 100px;
 }
 
 .font-bold {
