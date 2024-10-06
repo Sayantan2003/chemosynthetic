@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submarine Dive Parallax</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Protest+Revolution&display=swap"
+    rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <audio src="./water.mp3" id="waterSound" class=""  loop muted type="audio/mpeg"></audio>
+  <div class="ripple-effect"></div>
+  <div class="textPlace absolute top-0 left-0 w-full h-screen flex items-center justify-center z-30 text-white">
+    <p class="fade-text protest-revolution-regular text-[100px] w-[75%] text-center" id="animatedText">Enter the Depths of Life Beyond Light</p>
+  </div>
+  <button
+    class="exploreBtn w-40 h-10 bg-white text-[rgb(38,53,104)] absolute bottom-16 right-[45%] z-30 rounded-full font-bold">Explore</button>
+  <div class="parallax-container">
+    <div class="info w-8 flex flex-col items-center justify-center top-3 left-10 fixed z-50 text-white">
+      <p class="depthInfo text-lg font-bold ">0m</p>
+    </div>
+
+    <div class="relative top-0 left-0 w-full h-screen ">
+      <!-- Existing Fish -->
+      <div class="fish fish1">
+        <img class="relative top-0 left-0" src="./public/images/fish1.png" alt="Fish1">
+        <img class="relative top-10 -left-24" src="./public/images/fish1.png" alt="Fish 1">
+        <img class="relative top-0 -left-20" src="./public/images/fish1.png" alt="Fish 1">
+        <img class="relative top-10 -left-40" src="./public/images/fish1.png" alt="Fish 1">
+        <img class="relative top-5 -left-10" src="./public/images/fish1.png" alt="Fish 1">
+        <img class="relative top-15 -left-30" src="./public/images/fish1.png" alt="Fish 1">
+        <img class="relative top-8 -left-15" src="./public/images/fish1.png" alt="Fish 1">
+        <img class="relative top-12 -left-35" src="./public/images/fish1.png" alt="Fish 1">
+      </div>
+      <div class="fish fish3">
+        <img src="./public/images/fish 3.webp" alt="Fish 3">
+        <img src="./public/images/fish 3.webp" alt="Fish 3">
+        <img src="./public/images/fish 3.webp" alt="Fish 3">
+        <img src="./public/images/fish 3.webp" alt="Fish 3">
+        <img src="./public/images/fish 3.webp" alt="Fish 3">
+        <img src="./public/images/fish 3.webp" alt="Fish 3">
+      </div>
+      <div class="fish fish4">
+        <img src="./public/images/orangeFish.png" alt="orangeFish">
+      </div>
+      <div class="fish fish5">
+        <img src="./public/images/turtle.png" alt="turtle">
+      </div>
+      <!-- Bubbles -->
+      <div class="bubbles">
+        <!-- Generate multiple bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    <div class="relative top-100vh left-0 w-full h-screen ">
+      <!-- Existing Fish -->
+      <div class="fish fish1">
+        <img src="./public/images/fish1.png" alt="Fish1">
+      </div>
+
+      <!-- Additional Fish -->
+      <div class="fish shark1">
+        <img src="./public/images/shark1.png" alt="shark1">
+      </div>
+      <div class="fish fish4">
+        <img src="./public/images/orangeFish.png" alt="orangeFish">
+      </div>
+
+      <!-- Bubbles -->
+      <div class="bubbles">
+        <!-- Generate multiple bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    <div class="relative top-200vh left-0 w-full h-screen ">
+      <!-- Existing Fish -->
+      <div class="fish fish1">
+        <img src="./public/images/fish1.png" alt="Fish 1">
+      </div>
+      <div class="fish group1">
+        <img src="./public/images/group1.png" alt="group1.png">
+      </div>
+
+      <!-- Bubbles -->
+      <div class="bubbles">
+        <!-- Generate multiple bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    <div class="relative top-300vh left-0 w-full h-screen ">
+      <!-- Existing Fish -->
+      <div class="fish fish1">
+        <img src="./public/images/fish 3.webp" alt="fish3">
+        <img src="./public/images/fish 3.webp" alt="fish3">
+        <img src="./public/images/fish 3.webp" alt="fish3">
+      </div>
+      <div class="fish fish2">
+        <img src="./public/images/shark1.png" alt="shark1">
+      </div>
+
+      <!-- Bubbles -->
+      <div class="bubbles">
+        <!-- Generate multiple bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    <div class="relative top-400vh left-0 w-full h-screen ">
+      <!-- Existing Fish -->
+      <div class="fish shark1">
+        <img src="./public/images/shark1.png" alt="shark1">
+
+      </div>
+
+      <!-- Bubbles -->
+      <div class="bubbles">
+        <!-- Generate multiple bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    <div class="relative top-500vh left-0 w-full h-screen ">
+      <div class="fish whale">
+        <img src="./public/images/whale.png" alt="whale">
+      </div>
+    </div>
+
+    <div id="container" class="container relative top-600vh left-0 w-full h-screen ">
+      <!-- Overlay that creates the spotlight effect -->
+      <div class="overlay"></div>
+
+      <!-- Content area with buttons -->
+      <div class="content relative w-full h-full">
+        <a href="./details.html?name=Bathymodiolus Mussels"><button class="btn absolute bottom-20 left-60" data-message="Bathymodiolus Mussels"><img class="w-28 h-28"
+              src="./public/images/Bathymodiolus Mussels.png" alt="Bathymodiolus Mussels"></button></a>
+        <a href="./details.html?name=Polychaete Worms"><button class="btn absolute bottom-48 left-2/3" data-message="Polychaete Worms"><img class="w-24 h-24"
+            src="./public/images/Polychaete Worms.png" alt="Polychaete Worms"></button></a>
+        <a href="./details.html?name=Siboglinid Tube Worms"><button class="btn absolute bottom-5 left-[50%]" data-message="Siboglinid Tube Worms"><img class="w-36 h-36"
+            src="./public/images/Siboglinid Tube Worms.png" alt="Siboglinid Tube Worms"></button></a>
+        <a href="./details.html?name=Amphipods"><button class="btn absolute bottom-80 left-[32%]" data-message="Amphipods"><img class="w-36 h-36"
+            src="./public/images/Amphipods.png" alt="Amphipods"></button></a>
+        <a href="./details.html?name=Vent Snails"><button class="btn absolute bottom-4 right-[18%]" data-message="Vent Snails"><img class="w-36 h-36"
+            src="./public/images/Vent Snails.png" alt="Vent Snails"></button></a>
+        <a href="./details.html?name=Vestimentiferan Tube Worms"><button class="btn absolute top-36 left-10" data-message="Vestimentiferan Tube Worms"><img class="w-10 h-10"
+            src="./public/images/Vestimentiferan Tube Worms.png" alt="Vestimentiferan Tube Worms"></button></a>
+        <a href="./details.html?name=Deep-Sea Bivalves"><button class="btn absolute bottom-4 right-[58%]" data-message="Deep-Sea Bivalves"><img class="w-28 h-28"
+            src="./public/images/Deep-Sea Bivalves.png" alt="Deep-Sea Bivalves"></button></a>
+      </div>
+    </div>
+    <div id="oceanCanvas"></div>
+    <!-- <canvas id="oceanCanvas" class="relative top-600vh left-0 w-full h-screen z-50 bg-black"></canvas> -->
+  </div>
+
+  
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
